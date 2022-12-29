@@ -1,10 +1,11 @@
 import Link from 'next/link'
+import { useContext } from 'react';
+import { UserContext } from '../lib/context'
 
 // Top Navbar
 export default function Navbar() {
     // two pieces of real-time state
-    const user = null;
-    const username = null;
+    const { user, username } = useContext(UserContext);
 
     return (
         <nav className='navbar'>

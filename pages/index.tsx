@@ -4,17 +4,15 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
+import Loader from '../components/Loader'
+import toast from 'react-hot-toast'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
-      <Link prefetch={false} href={{
-            pathname: '/[username]',
-            query: { username: "willo" }
-          }}>
-        Will's Profile
-      </Link>
+      <button onClick={() => {toast.success('Hello Toast!')}}>Toast Me</button>
     </>
   )
 }
